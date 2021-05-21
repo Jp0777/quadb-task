@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/data.css">
+    <title>Document</title>
+
+
+</head>
+
+<body class="bg-dark">
+
+    <div class="d-flex justify-content-between container align-items-center mt-5">
+        <div class="text-white"><span class="holdininfo">HOLDININFO</span>.<span>com</span><br>Powered by
+            <span class="finstreet">Finstreet</span>
+        </div>
+        <div class="text-white">
+            <button type="button" class="inr btn">INR<img src="arrow-217-16.png" class="inrimg"></button>
+            <button type="button" class="btc btn">BTC<img src="arrow-217-16.png" class="btcimg"></button>
+        </div>&nbsp;&nbsp;
+        <div>
+            <button type="button" class="bt58 btn">58</button>&nbsp;
+            <button class="bttelegram">
+                <img src="https://img.icons8.com/color/30/000000/telegram-app--v5.png" />Connect
+                Telegram</button>&nbsp;&nbsp;<img src="switch (2).svg" style="width:50px;">
+        </div>
+    </div><br>
+    <div class="container table-responsive">
+        <table class="table  gfg">
+            <thead>
+                <tr class="heading">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Buy/Sell Price</th>
+                    <th scope="col">Volume</th>
+                    <th scope="col">Base Unit</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <%for(let i=0;i<10;i++){%>
+                    <tr class="tbody">
+                        <th scope="col">
+                            <%=i+1%>
+                        </th>
+                        <th scope="col">
+                            <%=result[array[i]].name%>
+                        </th>
+                        <th scope="col">
+                            ₹ <%=result[array[i]].last%>
+                        </th>
+                        <th scope=" col">
+                            ₹ <%=result[array[i]].buy%>/₹ <%=result[array[i]].buy%>
+                        </th>
+                        <th scope="col">
+                            <%=result[array[i]].volume%>
+                        </th>
+                        <th scope="col">
+                            <%=result[array[i]].base_unit%>
+                        </th>
+                    </tr>
+                    <% }%>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+</body>
+
+</html>
